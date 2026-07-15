@@ -20,8 +20,11 @@ export function Work() {
         {projects.map((project) => (
           <a
             className="group block overflow-hidden border-t border-ink py-[22px] pb-7 last:border-b"
-            href="#contact"
+            href={project.href}
             key={project.title}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`View ${project.title}`}
             data-reveal
             style={{ "--accent": project.color } as CSSProperties}
           >
