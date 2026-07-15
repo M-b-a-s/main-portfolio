@@ -5,9 +5,11 @@ export const projects = [
 ]
 
 export const services = [
-  ['01', 'Lorem ipsum dolor', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'],
-  ['02', 'Consectetur elit', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'],
-  ['03', 'Magna aliqua', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'],
+  ['01', 'Full-stack development', 'Building responsive user experiences, robust APIs, and maintainable backend systems that work together as one cohesive product.'],
+  ['02', 'Quality assurance', 'Improving software reliability through thoughtful test strategies, automation, code reviews, and quality checks across the delivery lifecycle.'],
+  ['03', 'System design', 'Designing scalable, secure, and resilient architectures with clear boundaries, practical trade-offs, and room for future growth.'],
+  ['04', 'DevOps', 'Streamlining delivery with CI/CD pipelines, cloud infrastructure, containerization, observability, and reliable deployment practices.'],
+  ['05', 'Team leadership', 'Guiding engineering teams through clear technical direction, mentoring, effective collaboration, and a shared standard for delivery.'],
 ]
 
 export const processSteps = [

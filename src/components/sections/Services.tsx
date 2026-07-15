@@ -12,20 +12,20 @@ export function Services() {
         data-reveal
       >
         <span>Services</span>
-        <span className="max-sm:hidden">(Sit amet consectetur)</span>
+        <span className="max-sm:hidden">(End-to-end engineering)</span>
       </div>
       <div
         className="grid grid-cols-[1.5fr_.5fr] items-end gap-[60px] py-[70px] pb-[90px] max-[900px]:grid-cols-1 max-sm:py-[55px]"
         data-reveal
       >
         <h2 className="text-[clamp(48px,6vw,90px)] font-medium leading-[.93] tracking-[-.055em] max-sm:text-[49px]">
-          Lorem ipsum.
+          From first idea
           <br />
-          <em className="font-serif font-light">Dolor sit amet.</em>
+          <em className="font-serif font-light">to reliable delivery.</em>
         </h2>
         <p className="max-w-[400px] text-[15px] leading-[1.65] text-[#585851] max-[900px]:ml-[25%] max-sm:ml-0">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt.
+          I help teams design, build, test, and operate dependable software—while
+          providing the technical leadership needed to deliver with confidence.
         </p>
       </div>
       <div className="border-b border-ink">
