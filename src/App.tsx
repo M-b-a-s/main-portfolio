@@ -20,7 +20,16 @@ function App() {
       </a>
       <Header />
       <main id="main">{isAboutPage ? <AboutPage /> : <HomePage />}</main>
-      <Footer />
+      {isAboutPage ? (
+        <Footer />
+      ) : (
+        <div
+          className="home-parallax-footer overflow-hidden bg-paper"
+          data-parallax-offset="32"
+        >
+          <Footer />
+        </div>
+      )}
     </div>
   );
 }

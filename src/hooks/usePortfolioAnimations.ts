@@ -19,6 +19,25 @@ export function usePortfolioAnimations(root: RefObject<HTMLDivElement | null>) {
       const counter = { value: 0 }
       gsap.to(counter, { value: Number(element.dataset.value), duration: 1.8, ease: 'power2.out', scrollTrigger: { trigger: element, start: 'top 85%', once: true }, onUpdate: () => { element.textContent = Math.round(counter.value).toString() } })
     })
+    gsap.utils.toArray<HTMLElement>('.home-parallax .parallax-section, .home-parallax-footer').forEach((section) => {
+      const layer = section.firstElementChild
+      if (!(layer instanceof HTMLElement)) return
+
+      gsap.to(layer, {
+        y: () => {
+          const offset = Number(section.dataset.parallaxOffset ?? 48)
+          return -offset * (window.innerWidth < 640 ? 0.55 : 1)
+        },
+        ease: 'none',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1.1,
+          invalidateOnRefresh: true,
+        },
+      })
+    })
     const marquee = document.querySelector<HTMLElement>('.ticker')
     const marqueeTween = gsap.to('.marquee-track', { xPercent: -50, duration: 24, ease: 'none', repeat: -1 })
     const pauseMarquee = () => marqueeTween.pause()
