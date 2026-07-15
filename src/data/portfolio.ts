@@ -1,7 +1,7 @@
 export const projects = [
-  { id: '01', year: '2026', title: 'Lorem Ipsum', type: 'Dolor sit amet', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo sed lorem.', tags: ['Lorem', 'Ipsum', 'Dolor'], color: '#ff5938' },
-  { id: '02', year: '2025', title: 'Dolor Amet', type: 'Consectetur elit', description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.', tags: ['Amet', 'Elit', 'Magna'], color: '#c5ee4f' },
-  { id: '03', year: '2024', title: 'Magna Aliqua', type: 'Tempor incididunt', description: 'Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.', tags: ['Tempor', 'Labore', 'Aliqua'], color: '#8b87ff' },
+  { id: '01', status: 'Currently building', title: 'Internal Developer Platform', type: 'Platform engineering', description: 'A self-service platform designed to give developers clear golden paths for provisioning environments, shipping applications, and understanding service ownership.', tags: ['Self-service', 'Developer experience', 'Golden paths'], color: '#ff5938' },
+  { id: '02', status: 'Planned build', title: 'Observability Platform', type: 'Reliability engineering', description: 'A unified view of system health that brings metrics, logs, traces, dashboards, and actionable alerts together for faster, more confident troubleshooting.', tags: ['Metrics', 'Logs & traces', 'Alerting'], color: '#c5ee4f' },
+  { id: '03', status: 'Planned build', title: 'Workflow Automation Platform', type: 'Automation systems', description: 'A flexible platform for designing and running repeatable workflows across tools, approvals, and teams—with visibility into every step and outcome.', tags: ['Automation', 'Integrations', 'Orchestration'], color: '#8b87ff' },
 ]
 
 export const services = [

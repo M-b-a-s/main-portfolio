@@ -6,15 +6,15 @@ export function Work() {
   return (
     <section className="shell pb-37.5 max-sm:pb-25" id="work">
       <SectionHead
-        label="Projects · 2024—26"
+        label="Projects · In progress"
         title={
           <>
-            Lorem ipsum
+            Platforms designed
             <br />
-            <em>dolor sit amet.</em>
+            <em>to remove friction.</em>
           </>
         }
-        copy="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+        copy="Three major platform projects exploring better developer experience, clearer system visibility, and smarter automation. The Internal Developer Platform is currently in active development."
       />
       <div>
         {projects.map((project) => (
@@ -26,16 +26,16 @@ export function Work() {
             style={{ "--accent": project.color } as CSSProperties}
           >
             <div
-              className={`grid grid-cols-[80px_100px_1fr_auto] max-sm:grid-cols-[50px_1fr_auto] ${mono}`}
+              className={`grid grid-cols-[80px_150px_1fr_auto] max-sm:grid-cols-[50px_1fr_auto] ${mono}`}
             >
               <span>{project.id}</span>
-              <span>{project.year}</span>
+              <span>{project.status}</span>
               <span className="max-sm:hidden">{project.type}</span>
               <Arrow diagonal />
             </div>
             <div className="grid min-h-[250px] grid-cols-[1.1fr_.75fr_.55fr] items-center gap-[35px] max-[900px]:grid-cols-[1fr_.65fr] max-sm:block max-sm:min-h-0 max-sm:py-8 max-sm:pb-6">
               <h3
-                className={`${serifHeading} text-[clamp(46px,6vw,92px)] leading-[.95] transition-transform duration-500 group-hover:translate-x-3.5 max-sm:mb-6 max-sm:text-[55px]`}
+                className={`${serifHeading} text-[clamp(44px,4.8vw,76px)] leading-[.95] transition-transform duration-500 group-hover:translate-x-3.5 max-sm:mb-6 max-sm:text-[48px]`}
               >
                 {project.title}
               </h3>
