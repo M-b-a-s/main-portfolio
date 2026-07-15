@@ -11,7 +11,7 @@ export const services = [
 ]
 
 export const processSteps = [
-  ['01 / Lorem', 'Lorem ipsum dolor.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'],
-  ['02 / Ipsum', 'Consectetur adipiscing.', 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.'],
-  ['03 / Dolor', 'Magna aliqua elit.', 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.'],
+  ['01 / Define', 'Goals & requirements.', 'I clarify what I am building, why it matters, and who it serves, then turn that intent into focused user stories, acceptance criteria, and measurable requirements.'],
+  ['02 / Design', 'Constraints & architecture.', 'I balance time, resources, scope, and quality before choosing the simplest architecture that fits—mapping the data, API, frontend, and a practical path for growth.'],
+  ['03 / Deliver', 'Build, review & improve.', 'I build with consistent standards and quality checks, then review what worked, what needs improvement, and which tools or techniques can make the next project stronger.'],
 ]
