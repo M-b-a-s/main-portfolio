@@ -19,7 +19,13 @@ export function usePortfolioAnimations(root: RefObject<HTMLDivElement | null>) {
       const counter = { value: 0 }
       gsap.to(counter, { value: Number(element.dataset.value), duration: 1.8, ease: 'power2.out', scrollTrigger: { trigger: element, start: 'top 85%', once: true }, onUpdate: () => { element.textContent = Math.round(counter.value).toString() } })
     })
-    gsap.to('.marquee-track', { xPercent: -50, duration: 24, ease: 'none', repeat: -1 })
+    const marquee = document.querySelector<HTMLElement>('.ticker')
+    const marqueeTween = gsap.to('.marquee-track', { xPercent: -50, duration: 24, ease: 'none', repeat: -1 })
+    const pauseMarquee = () => marqueeTween.pause()
+    const resumeMarquee = () => marqueeTween.play()
+
+    marquee?.addEventListener('mouseenter', pauseMarquee)
+    marquee?.addEventListener('mouseleave', resumeMarquee)
 
     const cleanups = gsap.utils.toArray<HTMLElement>('.magnetic').map((button) => {
       const move = (event: MouseEvent) => {
@@ -31,6 +37,10 @@ export function usePortfolioAnimations(root: RefObject<HTMLDivElement | null>) {
       button.addEventListener('mouseleave', leave)
       return () => { button.removeEventListener('mousemove', move); button.removeEventListener('mouseleave', leave) }
     })
-    return () => cleanups.forEach(cleanup => cleanup())
+    return () => {
+      marquee?.removeEventListener('mouseenter', pauseMarquee)
+      marquee?.removeEventListener('mouseleave', resumeMarquee)
+      cleanups.forEach(cleanup => cleanup())
+    }
   }, { scope: root })
 }
