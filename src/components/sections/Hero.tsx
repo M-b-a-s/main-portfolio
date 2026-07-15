@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Arrow, mono } from "../ui";
+import { mono } from "../ui";
 
 export function Hero() {
   const [time, setTime] = useState("");
@@ -32,7 +32,7 @@ export function Hero() {
       </div>
       <h1 className="my-auto text-[clamp(64px,9.4vw,152px)] font-medium leading-[.84] tracking-[-.07em] max-sm:text-[clamp(56px,19vw,88px)] max-sm:leading-[.88]">
         <span className="hero-line">
-          <span>Ikwukala-Mbas</span>
+          <span>Ikwukala-<em className="font-serif font-light">Mbas</em></span>
         </span>
         <span className="hero-line text-right max-sm:text-left">
           <span>
@@ -46,7 +46,18 @@ export function Hero() {
           href="#work"
           aria-label="Explore selected work"
         >
-          <Arrow />
+          <span className="globe-tilt" aria-hidden="true">
+            <svg
+              className="globe-spin size-6 max-sm:size-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.5"
+            >
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18M12 3c2.4 2.5 3.7 5.5 3.7 9S14.4 18.5 12 21M12 3c-2.4 2.5-3.7 5.5-3.7 9s1.3 6.5 3.7 9" />
+            </svg>
+          </span>
         </a>
         <p className="max-w-145 text-[clamp(15px,1.4vw,19px)] leading-normal max-sm:text-sm">
           Let's build systems that raise the standard. No noise, just thoughtful engineering across frontend,{" "}
