@@ -5,21 +5,21 @@ import { Arrow, mono, serifHeading } from "../components/ui";
 const companies = [
   {
     period: "2025—Now",
-    company: "Northstar Systems",
-    role: "Senior Software Engineer",
-    copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo sed lorem feugiat posuere.",
+    company: "Nerve Logistics",
+    role: "Software Engineer - CTO",
+    copy: "Leading product and engineering strategy while building the reliable software systems that move Nerve Logistics forward.",
   },
   {
-    period: "2023—25",
-    company: "Atlas Digital",
-    role: "Full-stack Engineer",
-    copy: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    period: "2025",
+    company: "Venueri",
+    role: "Associate Product Engineer",
+    copy: "Collaborated across product and engineering to turn user needs into thoughtful, practical features for the Venueri platform.",
   },
   {
-    period: "2021—23",
-    company: "Kinetic Labs",
-    role: "Software Engineer",
-    copy: "Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.",
+    period: "2021—Now",
+    company: "Freelance",
+    role: "FullStack Engineer",
+    copy: "Designing and delivering maintainable full-stack solutions that help clients move from rough ideas to working products.",
   },
 ];
 
@@ -95,7 +95,7 @@ export function WorkPage() {
         <div className="grid grid-cols-[.65fr_1.35fr] gap-14 max-[900px]:grid-cols-1">
           <div data-reveal>
             <span className={mono}>Project index</span>
-            <h2 id="project-index-title" className="mt-5 max-w-105 text-[clamp(48px,5.5vw,82px)] font-medium leading-[.92] tracking-[-.05em]">
+            <h2 id="project-index-title" className="mt-5 max-w-105 text-[clamp(48px,5.5vw,82px)] font-medium leading-[.92] tracking-tighter">
               Built with intent. <em className="font-serif font-light">Documented honestly.</em>
             </h2>
           </div>
