@@ -14,17 +14,17 @@ export function Header() {
     <>
       <header className="absolute inset-x-0 top-0 z-20 h-22 max-sm:h-18">
         <div className="nav-inner shell grid h-full grid-cols-[1fr_auto_1fr] items-center border-b border-ink/25 max-[900px]:grid-cols-[1fr_auto]">
-          <a href="/" aria-label="John Doe, home">
+          <a href="/" aria-label="Ikwukala-Mbas Ifechimenim, home">
             <Brand />
           </a>
           <nav
             className="flex gap-8 text-[13px] max-[900px]:hidden"
             aria-label="Main navigation"
           >
-            <a className="nav-link relative" href="/#work">
+            <a className="nav-link relative" href="/work/">
               Work
             </a>
-            <a className="nav-link relative" href="/#services">
+            <a className="nav-link relative" href="/services/">
               Services
             </a>
             <a className="nav-link relative" href="/about/">
@@ -55,8 +55,8 @@ export function Header() {
         aria-hidden={!menuOpen}
       >
         {[
-          ["Work", "/#work"],
-          ["Services", "/#services"],
+          ["Work", "/work/"],
+          ["Services", "/services/"],
           ["About", "/about/"],
           ["Contact", "/#contact"],
         ].map(([item, href], index) => (

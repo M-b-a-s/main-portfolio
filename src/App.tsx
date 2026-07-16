@@ -4,11 +4,24 @@ import { Header } from "./components/sections/Header";
 import { usePortfolioAnimations } from "./hooks/usePortfolioAnimations";
 import { AboutPage } from "./pages/AboutPage";
 import { HomePage } from "./pages/HomePage";
+import { ServicesPage } from "./pages/ServicesPage";
+import { WorkPage } from "./pages/WorkPage";
 
 function App() {
   const root = useRef<HTMLDivElement>(null);
   usePortfolioAnimations(root);
-  const isAboutPage = window.location.pathname.replace(/\/$/, "") === "/about";
+  const path = window.location.pathname.replace(/\/$/, "") || "/";
+  const isHomePage = path === "/";
+  const page =
+    path === "/about" ? (
+      <AboutPage />
+    ) : path === "/work" ? (
+      <WorkPage />
+    ) : path === "/services" ? (
+      <ServicesPage />
+    ) : (
+      <HomePage />
+    );
 
   return (
     <div ref={root}>
@@ -19,16 +32,16 @@ function App() {
         Skip to content
       </a>
       <Header />
-      <main id="main">{isAboutPage ? <AboutPage /> : <HomePage />}</main>
-      {isAboutPage ? (
-        <Footer />
-      ) : (
+      <main id="main">{page}</main>
+      {isHomePage ? (
         <div
           className="home-parallax-footer overflow-hidden bg-paper"
           data-parallax-offset="32"
         >
           <Footer />
         </div>
+      ) : (
+        <Footer />
       )}
     </div>
   );
