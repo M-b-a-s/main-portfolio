@@ -43,52 +43,6 @@ export function WorkPage() {
           </p>
         </div>
 
-        <div className="relative min-h-135 overflow-hidden border-y border-ink bg-[#e9edf0] px-8 py-12 max-[900px]:min-h-120 max-sm:min-h-0 max-sm:px-3 max-sm:py-8" data-reveal>
-          <div className="absolute -right-8 -top-12 size-52 bg-ink max-sm:hidden" aria-hidden="true" />
-          <div className={`relative z-1 flex justify-between ${mono}`}>
-            <span>Featured builds</span>
-            <span>01—03</span>
-          </div>
-
-          <div className="relative mt-10 h-89 max-sm:grid max-sm:h-auto max-sm:gap-4">
-            {projects.map((project, index) => (
-              <a
-                className="group absolute flex h-73 w-[42%] flex-col justify-between overflow-hidden border border-ink/25 p-6 shadow-[0_28px_55px_rgba(21,21,19,.18)] transition-transform duration-500 hover:-translate-y-3 max-sm:relative max-sm:left-auto! max-sm:top-auto! max-sm:h-65 max-sm:w-full max-sm:rotate-0!"
-                href={project.href}
-                target="_blank"
-                rel="noreferrer"
-                key={project.id}
-                style={
-                  {
-                    left: `${index * 25 + 7}%`,
-                    top: `${index === 1 ? 0 : 38}px`,
-                    zIndex: index === 1 ? 3 : index + 1,
-                    background: project.color,
-                    rotate: `${index === 0 ? -3 : index === 2 ? 3 : 0}deg`,
-                  } as CSSProperties
-                }
-              >
-                <div className={`flex justify-between ${mono}`}>
-                  <span>{project.status}</span>
-                  <Arrow diagonal />
-                </div>
-                <div>
-                  <span className={`${mono} mb-3 block`}>{project.type}</span>
-                  <h2 className={`${serifHeading} max-w-115 text-[clamp(34px,4vw,58px)] leading-[.9]`}>
-                    {project.title}
-                  </h2>
-                </div>
-                <span className="self-end font-serif text-6xl font-light">{project.id}</span>
-              </a>
-            ))}
-          </div>
-
-          <div className={`relative z-4 flex items-center justify-end gap-5 ${mono}`}>
-            <span className="h-px w-28 bg-signal" />
-            <span className="text-3xl font-medium">01</span>
-            <span className="text-ink/40">02 03</span>
-          </div>
-        </div>
       </section>
 
       <section className="shell py-30 max-sm:py-20" aria-labelledby="project-index-title">
