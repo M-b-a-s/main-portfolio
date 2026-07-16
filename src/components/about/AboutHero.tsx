@@ -1,14 +1,49 @@
-import { mono } from '../ui'
+import { mono } from "../ui";
 
 export function AboutHero() {
-  return <section className="shell grid min-h-screen grid-cols-[.82fr_1.18fr] gap-8 pb-10 pt-[132px] max-[900px]:grid-cols-1 max-sm:pt-[105px]" id="top">
-    <div className="about-portrait relative min-h-[620px] overflow-hidden bg-[#8b87ff] max-[900px]:order-2 max-sm:min-h-[470px]" data-reveal>
-      <div className="portrait-noise absolute inset-0 z-[1] opacity-10" /><div className="absolute left-1/2 top-[18%] aspect-square w-[58%] -translate-x-1/2 rounded-full border border-ink" /><div className="absolute -bottom-[14%] left-1/2 h-[62%] w-[68%] -translate-x-1/2 rounded-t-[48%] bg-ink" /><span className={`absolute left-6 top-6 z-[2] ${mono}`}>Lorem ipsum / 2026</span><strong className="absolute bottom-3 right-5 z-[2] font-serif text-[clamp(90px,12vw,180px)] font-light leading-none text-paper mix-blend-difference">JD</strong>
-    </div>
-    <div className="flex flex-col justify-between pb-5 max-[900px]:min-h-[570px] max-sm:min-h-[510px]">
-      <div className={`eyebrow flex justify-between border-b border-ink/25 pb-4 ${mono}`}><span>About</span><span>(01 — 04)</span></div>
-      <h1 className="text-[clamp(64px,7.7vw,118px)] font-medium leading-[.86] tracking-[-.065em]"><span className="hero-line"><span>Lorem ipsum</span></span><span className="hero-line"><span>dolor <em className="font-serif font-light">sit amet.</em></span></span></h1>
-      <p className="hero-bottom max-w-[690px] text-[clamp(17px,1.7vw,24px)] leading-[1.45]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-  </section>
+  return (
+    <section className="shell min-h-screen pb-20 pt-34 max-sm:pt-26" id="top">
+      <div className={`flex justify-between border-b border-ink/25 pb-4 ${mono}`} data-reveal>
+        <span>About / Ifechimenim</span>
+        <span className="max-sm:hidden">Software engineer · Port Harcourt, Nigeria</span>
+      </div>
+
+      <div className="py-15 max-sm:py-10" data-reveal>
+        <p className={`${mono} mb-7`}>Product thinking meets engineering depth</p>
+        <h1 className="max-w-330 text-[clamp(68px,10vw,154px)] font-medium leading-[.8] tracking-[-.07em]">
+          Engineering that
+          <br />
+          <em className="font-serif font-light">feels considered.</em>
+        </h1>
+      </div>
+
+      <div className="grid grid-cols-[.85fr_1.15fr] gap-5 max-[900px]:grid-cols-1">
+        <div className="relative min-h-155 overflow-hidden rounded-[38px] bg-[#d9d9d3] max-sm:min-h-125" data-reveal>
+          <img
+            className="absolute inset-0 size-full object-cover object-[center_55%]"
+            src="/my-photo.jpg"
+            alt="Ikwukala-Mbas Ifechimenim"
+          />
+          <span className={`absolute left-6 top-6 rounded-full bg-paper/85 px-4 py-2 backdrop-blur-md ${mono}`}>
+            Building useful systems
+          </span>
+        </div>
+
+        <div className="grid gap-5 md:grid-rows-[1.15fr_.85fr]">
+          <article className="flex min-h-90 flex-col justify-between rounded-[38px] bg-ink p-[clamp(30px,5vw,65px)] text-paper" data-reveal>
+            <span className={mono}>What I do</span>
+            <p className="max-w-190 text-[clamp(29px,4vw,55px)] leading-[1.08] tracking-[-.04em]">
+              I turn rough ideas into clear, useful products that feel fast, reliable, and easy to understand.
+            </p>
+          </article>
+          <article className="flex min-h-65 flex-col justify-between rounded-[38px] bg-signal p-[clamp(30px,5vw,60px)] text-ink" data-reveal>
+            <span className={mono}>Where I work best</span>
+            <p className="max-w-180 text-[clamp(24px,3vw,42px)] leading-[1.12] tracking-[-.035em]">
+              At the intersection of polished interfaces, practical automation, cloud workflows, and maintainable systems.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  );
 }

@@ -1,8 +1,42 @@
-import { mono } from '../ui'
+import { mono } from "../ui";
+
+const perspectives = [
+  ["01", "Full-stack", "I connect interface decisions to APIs, data, and the systems behind them."],
+  ["02", "Platform-minded", "I look for repeatable paths that reduce friction for developers and teams."],
+  ["03", "Quality-led", "I treat testing, reliability, and maintainability as part of the build—not a final step."],
+];
 
 export function AboutStory() {
-  return <section className="shell py-[150px] max-sm:py-[95px]">
-    <div className="grid grid-cols-[.75fr_1.25fr] gap-14 max-[900px]:grid-cols-1"><span className={mono} data-reveal>Lorem ipsum dolor</span><div data-reveal><h2 className="max-w-[900px] text-[clamp(43px,5.5vw,82px)] font-medium leading-[.98] tracking-[-.05em]">Lorem ipsum dolor sit amet, <em className="font-serif font-light">consectetur adipiscing.</em></h2><div className="mt-16 grid grid-cols-2 gap-10 border-t border-ink pt-7 max-sm:grid-cols-1"><p className="leading-[1.75] text-[#55554f]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><p className="leading-[1.75] text-[#55554f]">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p></div></div></div>
-    <div className="relative mt-[130px] h-[min(70vw,760px)] min-h-[430px] overflow-hidden bg-signal max-sm:mt-20" data-reveal><div className="portrait-noise absolute inset-0 opacity-10" /><span className={`absolute left-6 top-6 ${mono}`}>Consectetur / Magna aliqua</span><div className="absolute left-[12%] top-[13%] size-[55%] rounded-full border border-ink" /><div className="absolute -right-[5%] -bottom-[35%] aspect-square w-[68%] rotate-12 border border-ink bg-paper" /><strong className="absolute bottom-4 left-6 font-serif text-[clamp(80px,16vw,230px)] font-light leading-none">02</strong></div>
-  </section>
+  return (
+    <section className="shell py-32 max-sm:py-20" aria-labelledby="about-story-title">
+      <div className="grid grid-cols-[.55fr_1.45fr] gap-14 max-[900px]:grid-cols-1">
+        <span className={mono} data-reveal>My perspective</span>
+        <div data-reveal>
+          <h2 id="about-story-title" className="max-w-275 text-[clamp(48px,6.6vw,100px)] font-medium leading-[.9] tracking-[-.06em]">
+            Good software should make a difficult problem <em className="font-serif font-light">feel simple.</em>
+          </h2>
+          <div className="mt-12 grid grid-cols-2 gap-10 border-t border-ink pt-7 max-sm:grid-cols-1">
+            <p className="leading-[1.8] text-[#565650]">
+              I&apos;m a software engineer focused on translating early ideas into dependable products. That means understanding the goal, choosing practical architecture, and paying attention to the details users actually experience.
+            </p>
+            <p className="leading-[1.8] text-[#565650]">
+              My work spans full-stack development, quality assurance, system design, DevOps, and technical leadership. I care about shipping well, but I care just as much about leaving behind code and workflows that teams can confidently evolve.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-20 grid grid-cols-3 overflow-hidden rounded-[32px] border border-ink max-[900px]:grid-cols-1" data-reveal>
+        {perspectives.map(([id, title, copy], index) => (
+          <article className={`flex min-h-70 flex-col justify-between p-8 ${index ? "border-l border-ink max-[900px]:border-l-0 max-[900px]:border-t" : ""}`} key={id}>
+            <span className={mono}>{id}</span>
+            <div>
+              <h3 className="font-serif text-4xl font-light">{title}</h3>
+              <p className="mt-4 max-w-95 text-sm leading-[1.7] text-[#5b5b54]">{copy}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }

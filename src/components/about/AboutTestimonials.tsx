@@ -1,8 +1,36 @@
-import { mono } from '../ui'
+import { mono } from "../ui";
 
-export function AboutTestimonials() {
-  return <section className="shell py-[150px] max-sm:py-[95px]"><div className={`flex justify-between border-b border-ink pb-[18px] ${mono}`} data-reveal><span>Lorem ipsum dolor</span><span>(02)</span></div><div className="grid grid-cols-2 max-[900px]:grid-cols-1">
-    <blockquote className="flex min-h-[430px] flex-col border-b border-ink/25 py-10 pr-12 max-[900px]:pr-0" data-reveal><span className="font-serif text-7xl font-light text-signal">“</span><p className="font-serif text-[clamp(26px,3vw,43px)] font-light leading-[1.2]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo sed lorem tincidunt posuere.</p><footer className={`mt-auto pt-10 ${mono}`}>Lorem Ipsum · Dolor Sit</footer></blockquote>
-    <blockquote className="flex min-h-[430px] flex-col border-b border-l border-ink/25 py-10 pl-12 max-[900px]:border-l-0 max-[900px]:pl-0" data-reveal><span className="font-serif text-7xl font-light text-signal">“</span><p className="font-serif text-[clamp(26px,3vw,43px)] font-light leading-[1.2]">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p><footer className={`mt-auto pt-10 ${mono}`}>Consectetur Elit · Magna Aliqua</footer></blockquote>
-  </div></section>
+const contributions = [
+  ["Product", "Shape an ambiguous idea into a focused experience with clear requirements and useful outcomes."],
+  ["Engineering", "Move across frontend, backend, architecture, automation, and delivery without losing sight of the whole system."],
+  ["Team", "Raise quality through shared standards, thoughtful reviews, mentoring, and calm technical direction."],
+];
+
+export function AboutApproach() {
+  return (
+    <section className="bg-ink py-32 text-paper max-sm:py-20" aria-labelledby="contribution-title">
+      <div className="shell">
+        <div className="text-center" data-reveal>
+          <span className={mono}>How I contribute</span>
+          <h2 id="contribution-title" className="mx-auto mt-6 max-w-285 text-[clamp(54px,7.8vw,118px)] font-medium leading-[.86] tracking-[-.06em]">
+            Close to the details.
+            <br />
+            <em className="font-serif font-light text-signal">Aware of the system.</em>
+          </h2>
+        </div>
+
+        <div className="mt-20 grid grid-cols-3 overflow-hidden rounded-[34px] border border-paper/30 max-[900px]:grid-cols-1" data-reveal>
+          {contributions.map(([title, copy], index) => (
+            <article className={`flex min-h-80 flex-col justify-between p-9 ${index ? "border-l border-paper/30 max-[900px]:border-l-0 max-[900px]:border-t" : ""}`} key={title}>
+              <span className={mono}>0{index + 1}</span>
+              <div>
+                <h3 className="font-serif text-4xl font-light">{title}</h3>
+                <p className="mt-5 max-w-105 text-sm leading-[1.75] text-paper/60">{copy}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

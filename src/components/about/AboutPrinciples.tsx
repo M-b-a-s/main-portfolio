@@ -1,58 +1,51 @@
 import { mono } from "../ui";
 
 const principles = [
-  [
-    "01",
-    "Lorem ipsum dolor",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  ],
-  [
-    "02",
-    "Consectetur adipiscing",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  ],
-  [
-    "03",
-    "Magna aliqua",
-    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-  ],
+  {
+    id: "01",
+    title: "Clarity before complexity.",
+    copy: "I start by making the goal, constraints, and definition of done visible. Clear thinking keeps architecture and implementation grounded in the problem that matters.",
+    className: "bg-ink text-paper md:col-span-4",
+  },
+  {
+    id: "02",
+    title: "Quality belongs in the process.",
+    copy: "Testing, feedback, observability, and consistent standards shape the work from the beginning instead of being added just before release.",
+    className: "bg-white text-ink md:col-span-2",
+  },
+  {
+    id: "03",
+    title: "Build for the next change.",
+    copy: "A successful launch is a starting point. I design code, systems, and workflows so the next developer can understand them and the next requirement has somewhere sensible to go.",
+    className: "bg-signal text-ink md:col-span-3",
+  },
+  {
+    id: "04",
+    title: "Strong teams share context.",
+    copy: "I value direct communication, useful documentation, constructive reviews, and technical decisions that the whole team can explain and support.",
+    className: "bg-[#dedcff] text-ink md:col-span-3",
+  },
 ];
 
 export function AboutPrinciples() {
   return (
-    <section className="bg-ink py-[140px] text-paper max-sm:py-[90px]">
+    <section className="bg-[#e8e8e3] py-30 max-sm:py-20" aria-labelledby="principles-title">
       <div className="shell">
-        <div
-          className={`flex justify-between border-b border-white/30 pb-[18px] ${mono}`}
-          data-reveal
-        >
-          <span>Lorem ipsum</span>
-          <span>(Dolor sit amet)</span>
+        <div className="grid grid-cols-[.65fr_1.35fr] gap-14 pb-16 max-[900px]:grid-cols-1" data-reveal>
+          <span className={mono}>Engineering principles / 04</span>
+          <h2 id="principles-title" className="text-[clamp(52px,7vw,105px)] font-medium leading-[.88] tracking-[-.06em]">
+            The standards behind <em className="font-serif font-light">how I build.</em>
+          </h2>
         </div>
-        <h2
-          className="my-20 max-w-[1000px] text-[clamp(54px,7.4vw,110px)] font-medium leading-[.9] tracking-[-.06em]"
-          data-reveal
-        >
-          Consectetur
-          <br />
-          <em className="font-serif font-light text-signal">
-            adipiscing elit.
-          </em>
-        </h2>
-        <div className="border-b border-white/30">
-          {principles.map(([id, title, copy]) => (
-            <article
-              className="grid grid-cols-[80px_.7fr_1fr] gap-8 border-t border-white/30 py-9 max-sm:grid-cols-[40px_1fr]"
-              key={id}
-              data-reveal
-            >
-              <span className={mono}>{id}</span>
-              <h3 className="font-serif text-[clamp(28px,3vw,45px)] font-light">
-                {title}
-              </h3>
-              <p className="max-w-[600px] leading-[1.7] text-white/60 max-sm:col-start-2">
-                {copy}
-              </p>
+
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-6">
+          {principles.map((principle) => (
+            <article className={`flex min-h-100 flex-col justify-between rounded-[38px] p-[clamp(30px,5vw,60px)] ${principle.className}`} key={principle.id} data-reveal>
+              <span className={mono}>{principle.id}</span>
+              <div>
+                <h3 className="max-w-165 text-[clamp(32px,4vw,58px)] font-medium leading-[.95] tracking-[-.045em]">{principle.title}</h3>
+                <p className="mt-6 max-w-155 text-sm leading-[1.75] opacity-65">{principle.copy}</p>
+              </div>
             </article>
           ))}
         </div>
