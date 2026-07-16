@@ -45,7 +45,7 @@ export function WorkPage() {
 
       </section>
 
-      <section className="shell py-30 max-sm:py-20" aria-labelledby="project-index-title">
+      <section className="shell py-20 max-sm:py-10" aria-labelledby="project-index-title">
         <div className="grid grid-cols-[.65fr_1.35fr] gap-14 max-[900px]:grid-cols-1">
           <div data-reveal>
             <span className={mono}>Project index</span>

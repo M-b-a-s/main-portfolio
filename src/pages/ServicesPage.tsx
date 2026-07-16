@@ -74,11 +74,11 @@ export function ServicesPage() {
             One partner across the <em className="font-serif font-light">whole build.</em>
           </h2>
           <p className="mx-auto mt-8 max-w-165 text-[17px] leading-[1.7] text-[#5b5b54]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. From the first architectural decision to deployment and iteration, every discipline stays connected.
+            I connect product decisions, architecture, implementation, quality, and operations so every stage supports the same outcome: software that works well and remains easy to evolve.
           </p>
         </div>
 
-        <div className="mt-20 grid grid-cols-5 overflow-hidden rounded-[32px] border border-ink max-[900px]:grid-cols-1" data-reveal>
+        <div className="mt-20 grid grid-cols-5 overflow-hidden rounded-4xl border border-ink max-[900px]:grid-cols-1" data-reveal>
           {["Discover", "Design", "Build", "Assure", "Operate"].map((step, index) => (
             <div className={`flex min-h-48 flex-col justify-between p-6 ${index ? "border-l border-ink max-[900px]:border-l-0 max-[900px]:border-t" : ""}`} key={step}>
               <span className={mono}>0{index + 1}</span>
@@ -96,7 +96,7 @@ export function ServicesPage() {
             <em className="font-serif font-light text-signal">that lasts.</em>
           </h2>
           <div>
-            <p className="mb-8 max-w-110 leading-[1.7] text-paper/65">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Let&apos;s shape the right engagement for your product and team.</p>
+            <p className="mb-8 max-w-110 leading-[1.7] text-paper/65">Whether you need focused engineering support or leadership across the full delivery cycle, we can shape an engagement around your product, team, and goals.</p>
             <a className="inline-flex items-center rounded-full bg-paper px-6 py-4 text-sm text-ink" href="mailto:mbasernest@outlook.com">Start a conversation <span className="ml-5"><Arrow diagonal /></span></a>
           </div>
         </div>
