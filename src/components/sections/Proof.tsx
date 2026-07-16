@@ -17,7 +17,7 @@ export function Proof() {
         data-reveal
       >
         <span>Proof</span>
-        <span className="max-sm:hidden">(Sit amet consectetur)</span>
+        <span className="max-sm:hidden">(2024—26)</span>
       </div>
       <div className="grid grid-cols-3 max-sm:grid-cols-1">
         {metrics.map(([value, suffix, copy], index) => (
